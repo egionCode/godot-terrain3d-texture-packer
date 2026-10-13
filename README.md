@@ -1,4 +1,4 @@
-# converter-texture-terrain3d
+# Godot Terrain3D Texture Packer
 
 Empacota texturas PBR no formato que o [Terrain3D](https://github.com/TokisanGames/Terrain3D) (Godot) espera, sem precisar do GIMP:
 

@@ -1,17 +1,17 @@
 # Godot Terrain3D Texture Packer
 
-Empacota texturas PBR no formato que o [Terrain3D](https://github.com/TokisanGames/Terrain3D) (Godot) espera, sem precisar do GIMP:
+Packs PBR textures into the layout [Terrain3D](https://github.com/TokisanGames/Terrain3D) (Godot) expects, no GIMP needed:
 
-| Arquivo gerado | RGB | Alpha |
+| Output file | RGB | Alpha |
 |---|---|---|
-| `<nome>_albedo_height.dds` | albedo (x AO, opcional) | height |
-| `<nome>_normal_roughness.png` | normal OpenGL | roughness |
+| `<name>_albedo_height.dds` | albedo (x AO, optional) | height |
+| `<name>_normal_roughness.png` | OpenGL normal | roughness |
 
-## Requisitos
+## Requirements
 
-- Python 3.9+ com `pillow` e `numpy`
-- `PySide6` (só para a GUI)
-- ImageMagick 7 (`magick`) para gerar DDS
+- Python 3.9+ with `pillow` and `numpy`
+- `PySide6` (GUI only)
+- ImageMagick 7 (`magick`) to write DDS
 
 ## GUI
 
@@ -19,23 +19,23 @@ Empacota texturas PBR no formato que o [Terrain3D](https://github.com/TokisanGam
 ./t3dpack_gui.py
 ```
 
-1. Arraste a pasta do material para a janela (ou use **Escolher pasta...**). Os mapas são detectados pelo nome e a saída vira `<pasta>/output`.
-2. Ajuste o que precisar: AO e intensidade, normal DirectX, canal do roughness, tamanho, formatos.
-3. Clique em **Gerar**.
+1. Drop the material folder on the window (or use **Choose folder...**). Maps are detected by filename and the output is set to `<folder>/output`.
+2. Adjust what you need: AO and strength, DirectX normal, roughness channel, size, formats.
+3. Click **Generate**.
 
 ## CLI
 
 ```bash
-# um material
-./t3dpack.py ~/texturas/Ground054 -o ~/projeto/textures/terrain
+# one material
+./t3dpack.py ~/textures/Ground054 -o ~/project/textures/terrain
 
-# vários materiais (uma pasta com subpastas), todos em 2048
-./t3dpack.py ~/texturas -o out -s 2048
+# several materials (a folder with subfolders), all at 2048
+./t3dpack.py ~/textures -o out -s 2048
 
-# só mostrar o que foi detectado
-./t3dpack.py ~/texturas -n
+# only show what was detected
+./t3dpack.py ~/textures -n
 ```
 
-Veja todas as opções com `./t3dpack.py --help`.
+See all options with `./t3dpack.py --help`.
 
-> O Terrain3D exige que todas as texturas do terreno tenham o mesmo tamanho. Em lote, use `-s`.
+> Terrain3D requires every terrain texture to have the same size. For batches, use `-s`.

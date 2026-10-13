@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Copyright (C) 2026 Victor
 """
 t3dpack_gui: graphical interface for t3dpack (Terrain3D texture packer).
 

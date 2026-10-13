@@ -39,3 +39,7 @@ Packs PBR textures into the layout [Terrain3D](https://github.com/TokisanGames/T
 See all options with `./t3dpack.py --help`.
 
 > Terrain3D requires every terrain texture to have the same size. For batches, use `-s`.
+
+## License
+
+[GPL-3.0-or-later](LICENSE). Free and open source forever: you can use, modify and share it (including to make commercial games), but any distributed version or fork must stay open source under the same license.
